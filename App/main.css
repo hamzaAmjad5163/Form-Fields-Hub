@@ -5,6 +5,66 @@ body {
   margin: 0;
 }
 
+/* ========================= color theme ================================ */
+:root {
+    --bg: rgb(255, 255, 255);
+    --white: rgb(190, 190, 190);
+    --primary: rgb(50, 206, 154);
+    --placeholder: rgb(106, 102, 108);
+  }
+
+  
+  /* ========================= Input Box ================================ */
+  /* .input-box {
+    display: grid;
+    place-items: center;
+    background-color: var(--bg);
+  } */
+  
+  .input-wrapper {
+    width: min(325px,80vw);
+    display: grid;
+    align-items: center;
+  
+    & > * {
+      grid-column: 1;
+      grid-row: 1;
+      /* font: 1.1rem futura,helvetica,sans-serif; */
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+  
+    & input {
+      position: relative;
+      border: 1.5px solid rgb(48, 48, 48);
+      border-radius: 0.25rem;
+      outline: none;
+      background-color: transparent;
+      color: rgb(48, 48, 48);
+      /* padding: 1rem; */
+      z-index: 0;
+      transition: border-color 0.5s;
+        box-shadow: none !important;
+      &:focus { border-color: rgb(104, 85, 85); }
+  
+      &:focus ~ span, 
+      &:not(:placeholder-shown) ~ span {
+        transform: translateY(-1.8rem) scale(0.75);
+        padding: 0 0.25rem;
+        color: rgb(48, 48, 48);
+      }
+    }
+  
+    & span {
+      width: max-content;
+      background-color: transparent;
+      margin-left: 1rem;
+      color: var(--placeholder);
+      transition: transform 0.5s;
+    }
+  }
+
+/* ========================= Navbar / sidebar ================================ */
 .wrapper {
   display: flex;
   flex: 1;
@@ -70,4 +130,125 @@ body {
   background-color: transparent;
   border: none;
   color: white;
+}
+
+/* ========================= Card ================================ */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    background-clip: border-box;
+    border: 1px solid var(--grey);
+    border: none;
+    background: transparent !important;
+    border-radius: 0;
+
+}
+
+.card:before,
+.card:after {
+    content: "";
+    position: absolute;
+}
+
+.card:not(.border-0):before {
+    left: 15px;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    border-top: 1px solid rgb(48, 48, 48);
+    border-bottom: 1px solid rgb(48, 48, 48);
+}
+
+.card:not(.border-0):after {
+    top: 15px;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    border-left: 1px solid rgb(48, 48, 48);
+    border-right: 1px solid rgb(48, 48, 48);
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    color: var(--white);
+}
+
+.card>*:not(.card-arrow):not(.card-img-overlay):not(.card-img):not(.hljs-container) {
+    position: relative;
+    z-index: 10;
+}
+
+.card .card-arrow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1000;
+}
+
+.card .card-arrow-top-left:before,
+.card .card-arrow-top-right:before,
+.card .card-arrow-bottom-left:before,
+.card .card-arrow-bottom-right:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background: rgb(48, 48, 48);
+}
+
+.card .card-arrow-top-left:after,
+.card .card-arrow-top-right:after,
+.card .card-arrow-bottom-left:after,
+.card .card-arrow-bottom-right:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: rgb(48, 48, 48);
+}
+
+.card .card-arrow-top-left,
+.card .card-arrow-bottom-left {
+    left: 0;
+}
+
+.card .card-arrow-top-right,
+.card .card-arrow-bottom-right {
+    right: 0;
+}
+
+.card .card-arrow-top-left:before,
+.card .card-arrow-top-left:after,
+.card .card-arrow-bottom-left:before,
+.card .card-arrow-bottom-left:after {
+    left: 0;
+}
+
+.card .card-arrow-top-right:before,
+.card .card-arrow-top-right:after,
+.card .card-arrow-bottom-right:before,
+.card .card-arrow-bottom-right:after {
+    right: 0;
+}
+
+.card .card-arrow-bottom-left:before,
+.card .card-arrow-bottom-right:before {
+    bottom: 2px;
+}
+
+.card .card-arrow-bottom-left:after,
+.card .card-arrow-bottom-right:after {
+    bottom: 0;
+}
+
+.card .card-arrow-top-left:before,
+.card .card-arrow-top-right:before {
+    top: 2px;
 }
