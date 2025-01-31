@@ -1,0 +1,476 @@
+<style>
+  .social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #007bff;
+  }
+
+  .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .card-footer {
+    text-align: center;
+  }
+
+  .btn-custom {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+  }
+
+  .btn-custom:hover {
+    background-color: #0056b3;
+  }
+
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+</style>
+
+<div class="row">
+  <!-- Login Page -->
+  <div class="col-4">
+    <div class="card">
+      <!-- Card Header -->
+      <div class="card-header">Login</div>
+
+      <!-- Card Body -->
+      <div class="card-body">
+        <!-- Login Form -->
+        <form id="loginForm" novalidate>
+          <!-- Email Field -->
+          <div class="mb-3">
+            <label for="email" class="form-label text-dark">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <div id="emailError" class="text-danger small"></div>
+          </div>
+
+          <!-- Password Field -->
+          <div class="mb-3">
+            <label for="password" class="form-label text-dark">Password</label>
+            <div class="input-group">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+              <span class="input-group-text bg-white">
+                <i
+                  class="fas fa-eye-slash"
+                  id="togglePassword"
+                  style="cursor: pointer"
+                ></i>
+              </span>
+              <div id="passwordError" class="text-danger small"></div>
+            </div>
+          </div>
+
+          <!-- Forgot Password Link -->
+          <div class="text-end mb-3">
+            <a href="#" class="text-decoration-none">Forgot Password?</a>
+          </div>
+          <!-- Login Button -->
+          <button type="submit" class="btn btn-custom mb-3">Login</button>
+
+          <!-- Social Icons -->
+          <div class="text-center social-icons mb-3">
+            <p>Or login with:</p>
+            <a href="#" class="fab fa-google"></a>
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-github"></a>
+          </div>
+        </form>
+      </div>
+
+      <!-- Card Footer -->
+      <div class="card-footer">
+        Don't have an account?
+        <a href="#" class="text-decoration-none">Register</a>
+      </div>
+      <div class="card-arrow">
+        <div class="card-arrow-top-left"></div>
+        <div class="card-arrow-top-right"></div>
+        <div class="card-arrow-bottom-left"></div>
+        <div class="card-arrow-bottom-right"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Registration Page -->
+  <div class="col-8">
+    <!-- Card -->
+    <div class="card">
+      <!-- Card Header -->
+      <div class="card-header text-center">
+        <h3>Registration</h3>
+      </div>
+
+      <!-- Card Body -->
+      <div class="card-body">
+        <!-- Registration Form -->
+        <form id="registrationForm">
+          <div class="row">
+            <div class="col-4">
+              <!-- First Name -->
+              <div class="mb-3">
+                <label for="firstName" class="form-label text-dark"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <!-- Middle Name -->
+              <div class="mb-3">
+                <label for="firstName" class="form-label text-dark"
+                  >Middle Name (optional)</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder=""
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <!-- Last Name -->
+              <div class="mb-3">
+                <label for="lastName" class="form-label text-dark"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <!-- Email Field -->
+              <div class="mb-3">
+                <label for="email" class="form-label text-dark">Email</label>
+                <input
+                  type="email"
+                  class="form-control emailValidField"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <!-- Error Message -->
+                <div
+                  class="error-message emailValidError text"
+                  id="email_Error"
+                ></div>
+              </div>
+            </div>
+            <div class="col-6">
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="password" class="form-label text-dark"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <!-- Confirm Password -->
+              <div class="mb-3">
+                <label for="confirmPassword" class="form-label text-dark"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmPassword"
+                  placeholder="Confirm your password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <!-- Date of Birth -->
+              <div class="mb-3">
+                <label for="dob" class="form-label text-dark"
+                  >Date of Birth</label
+                >
+                <input type="date" class="form-control" id="dob" required />
+              </div>
+            </div>
+            <div class="col-4">
+              <!-- Gender -->
+              <div class="mb-3">
+                <label class="form-label text-dark">Gender</label>
+                <div>
+                  <div class="form-check form-check-inline text-dark">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="male"
+                      value="male"
+                      required
+                    />
+                    <label class="form-check-label text-dark" for="male"
+                      >Male</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline text-dark">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="female"
+                      value="female"
+                      required
+                    />
+                    <label class="form-check-label text-dark" for="female"
+                      >Female</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline text-dark">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="other"
+                      value="other"
+                      required
+                    />
+                    <label class="form-check-label text-dark" for="other"
+                      >Other</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <!-- Country -->
+              <div class="mb-3">
+                <label for="country" class="form-label text-dark"
+                  >Country</label
+                >
+                <select class="form-select" id="country" required>
+                  <option value="" disabled selected>
+                    Select your country
+                  </option>
+                  <option value="usa">United States</option>
+                  <option value="canada">Canada</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="australia">Australia</option>
+                  <option value="india">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-6">
+              <!-- Phone Number -->
+              <div class="mb-3">
+                <label for="phone" class="form-label text-dark"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="phone" class="form-label text-dark">CNIC</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cnic"
+                  placeholder="Enter your CNIC"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <!-- Address -->
+              <div class="mb-3">
+                <label for="address" class="form-label text-dark"
+                  >Address</label
+                >
+                <textarea
+                  class="form-control"
+                  id="address"
+                  rows="3"
+                  placeholder="Enter your address"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+      </div>
+
+      <!-- Card Footer -->
+      <div class="card-footer text-center">
+        Already have an account?
+        <a href="#" class="text-decoration-none">Login</a>
+      </div>
+      <div class="card-arrow">
+        <div class="card-arrow-top-left"></div>
+        <div class="card-arrow-top-right"></div>
+        <div class="card-arrow-bottom-left"></div>
+        <div class="card-arrow-bottom-right"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script
+  src="https://kit.fontawesome.com/a076d05399.js"
+  crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<!-- Login Page JS -->
+<script>
+  document
+    .getElementById("togglePassword")
+    .addEventListener("click", function () {
+      const passwordField = document.getElementById("password");
+      const icon = this;
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      } else {
+        passwordField.type = "password";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      }
+    });
+
+  document
+    .getElementById("loginForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const emailField = document.getElementById("email");
+      const passwordField = document.getElementById("password");
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+      const successMessage = document.getElementById("successMessage");
+
+      let valid = true;
+
+      // Clear previous errors
+      emailError.textContent = "";
+      passwordError.textContent = "";
+      successMessage.textContent = "";
+
+      // Email validation
+      const emailValue = emailField.value.trim();
+      if (!emailValue.includes("@") || !emailValue.includes(".")) {
+        emailError.textContent = "Please provide a valid email address.";
+        valid = false;
+      }
+
+      // Password validation
+      const passwordValue = passwordField.value.trim();
+      const passwordPattern =
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/;
+
+      if (passwordValue.length < 6) {
+        passwordError.textContent =
+          "Password must be at least 6 characters long.";
+        valid = false;
+      } else if (!passwordPattern.test(passwordValue)) {
+        passwordError.textContent =
+          "Password must contain an uppercase letter, lowercase letter, number, and special character.";
+        valid = false;
+      }
+
+      if (valid) {
+        if (
+          emailField.value === "hamza@gmail.com" &&
+          passwordField.value === "12@Hamza."
+        ) {
+          alert("Login Successful!");
+        }
+      }
+    });
+</script>
+
+<!-- Registration Page JS
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Select all email fields and corresponding error containers
+    const emailFields = document.querySelectorAll(".emailValidField");
+
+    emailFields.forEach(function (emailField) {
+      const emailError =
+        emailField.parentElement.querySelector(".emailValidError");
+
+      if (emailField && emailError) {
+        emailField.addEventListener("input", function () {
+          validateEmail(emailField, emailError);
+        });
+      }
+    });
+
+    function validateEmail(field, errorElement) {
+      const email = field.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!email) {
+        errorElement.textContent = "Email is required.";
+        field.classList.add("is-invalid");
+      } else if (!emailPattern.test(email)) {
+        errorElement.textContent = "Please enter a valid email address.";
+        field.classList.add("is-invalid");
+      } else {
+        errorElement.textContent = "";
+        field.classList.remove("is-invalid");
+      }
+    }
+  });
+</script> -->
