@@ -41,7 +41,8 @@
   }
 </style>
 
-<div class="row">
+<div class="row g-3">
+  <h3 class="text-center">Auth Forms</h3>
   <!-- Login Page -->
   <div class="col-4">
     <div class="card">
@@ -123,7 +124,7 @@
     <!-- Card -->
     <div class="card">
       <!-- Card Header -->
-      <div class="card-header text-center">
+      <div class="card-header text-center pb-0">
         <h3>Registration</h3>
       </div>
 
@@ -201,28 +202,48 @@
                 <label for="password" class="form-label text-dark"
                   >Password</label
                 >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  placeholder="Enter your password"
-                  required
-                />
+                <div class="input-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                  <span class="input-group-text bg-white">
+                    <i
+                      class="fas fa-eye-slash"
+                      id="togglePassword"
+                      style="cursor: pointer"
+                    ></i>
+                  </span>
+                  <div id="passwordError" class="text-danger small"></div>
+                </div>
               </div>
             </div>
             <div class="col-6">
               <!-- Confirm Password -->
               <div class="mb-3">
-                <label for="confirmPassword" class="form-label text-dark"
+                <label for="password" class="form-label text-dark"
                   >Confirm Password</label
                 >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="confirmPassword"
-                  placeholder="Confirm your password"
-                  required
-                />
+                <div class="input-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                  <span class="input-group-text bg-white">
+                    <i
+                      class="fas fa-eye-slash"
+                      id="togglePassword"
+                      style="cursor: pointer"
+                    ></i>
+                  </span>
+                  <div id="passwordError" class="text-danger small"></div>
+                </div>
               </div>
             </div>
             <div class="col-4">
@@ -361,8 +382,229 @@
       </div>
     </div>
   </div>
+  <div class="col-4">
+    <div class="card forgot-password-card">
+      <div class="card-header pb-0">
+        <h4>Forgot Password</h4>
+      </div>
+
+      <div class="card-body">
+        <p>
+          Please enter your registered email address. We will send a reset link
+          to your email.
+        </p>
+
+        <form id="forgotPasswordForm">
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+            <div id="emailError" class="text-danger"></div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">
+              Send Reset Link
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card-footer text-center">
+        <small>Remembered your password? <a href="/login">Login here</a></small>
+      </div>
+      <div class="card-arrow">
+        <div class="card-arrow-top-left"></div>
+        <div class="card-arrow-top-right"></div>
+        <div class="card-arrow-bottom-left"></div>
+        <div class="card-arrow-bottom-right"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card reset-password-card">
+      <div class="card-header pb-0">
+        <h4>Reset Your Password</h4>
+      </div>
+
+      <div class="card-body">
+        <form id="resetPasswordForm">
+          <!-- New Password -->
+          <div class="mb-3">
+            <label for="password" class="form-label text-dark"
+              >New Password</label
+            >
+            <div class="input-group">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+              <span class="input-group-text bg-white">
+                <i
+                  class="fas fa-eye-slash"
+                  id="togglePassword"
+                  style="cursor: pointer"
+                ></i>
+              </span>
+              <div id="passwordError" class="text-danger small"></div>
+            </div>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="mb-3">
+            <label for="password" class="form-label text-dark"
+              >Confirm Password</label
+            >
+            <div class="input-group">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+              <span class="input-group-text bg-white">
+                <i
+                  class="fas fa-eye-slash"
+                  id="togglePassword"
+                  style="cursor: pointer"
+                ></i>
+              </span>
+              <div id="passwordError" class="text-danger small"></div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">
+              Reset Password
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card-footer">
+        <small>Remembered your password? <a href="/login">Login here</a></small>
+      </div>
+      <div class="card-arrow">
+        <div class="card-arrow-top-left"></div>
+        <div class="card-arrow-top-right"></div>
+        <div class="card-arrow-bottom-left"></div>
+        <div class="card-arrow-bottom-right"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card verification-card">
+      <div class="card-header pb-0">
+        <h4>Email Verification</h4>
+      </div>
+
+      <div class="card-body">
+        <p>
+          Please enter the verification code sent to your registered email
+          address.
+        </p>
+
+        <form id="emailVerificationForm">
+          <!-- Verification Code -->
+          <div class="mb-3">
+            <label for="verificationCode" class="form-label"
+              >Verification Code</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="verificationCode"
+              placeholder="Enter the code"
+              required
+              maxlength="6"
+            />
+            <div id="codeError" class="text-danger"></div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Verify Email</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card-footer text-center">
+        <small>Didn't receive a code? <a href="#">Resend Code</a></small>
+      </div>
+      <div class="card-arrow">
+        <div class="card-arrow-top-left"></div>
+        <div class="card-arrow-top-right"></div>
+        <div class="card-arrow-bottom-left"></div>
+        <div class="card-arrow-bottom-right"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="col-12">
+      <div class="card auth-card">
+        <div class="card-header pb-0">
+          <h4>Two-Factor Authentication</h4>
+        </div>
+
+        <div class="card-body">
+          <p>
+            A one-time passcode (OTP) has been sent to your registered email or
+            phone number. Please enter the code below.
+          </p>
+
+          <form id="twoFactorForm">
+            <!-- OTP Input -->
+            <div class="mb-3">
+              <label for="otpCode" class="form-label"
+                >Authentication Code</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="otpCode"
+                placeholder="Enter 6-digit code"
+                required
+                maxlength="6"
+              />
+              <div id="otpError" class="text-danger"></div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Verify</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card-footer text-center">
+          <small>Didn't receive a code? <a href="#">Resend Code</a></small>
+        </div>
+        <div class="card-arrow">
+          <div class="card-arrow-top-left"></div>
+          <div class="card-arrow-top-right"></div>
+          <div class="card-arrow-bottom-left"></div>
+          <div class="card-arrow-bottom-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
+<div class="row">
+  <h3></h3>
+</div>
 <!-- Bootstrap JS and dependencies -->
 <script
   src="https://kit.fontawesome.com/a076d05399.js"
@@ -440,7 +682,7 @@
     });
 </script>
 
-<!-- Registration Page JS
+<!-- Registration Page JS -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     // Select all email fields and corresponding error containers
@@ -473,4 +715,127 @@
       }
     }
   });
-</script> -->
+</script>
+
+<!-- Forget password  -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const forgotPasswordForm = document.getElementById("forgotPasswordForm");
+
+    forgotPasswordForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const emailField = document.getElementById("email");
+      const emailError = document.getElementById("emailError");
+
+      // Clear previous errors
+      emailError.textContent = "";
+
+      // Email validation
+      const emailValue = emailField.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailValue) {
+        emailError.textContent = "Email is required.";
+      } else if (!emailPattern.test(emailValue)) {
+        emailError.textContent = "Please enter a valid email address.";
+      } else {
+        alert("A reset link has been sent to your email.");
+      }
+    });
+  });
+</script>
+
+<!-- Reset password page JS -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const resetForm = document.getElementById("resetPasswordForm");
+
+    resetForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const emailField = document.getElementById("email");
+      const newPasswordField = document.getElementById("newPassword");
+      const confirmPasswordField = document.getElementById("confirmPassword");
+
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+      const confirmPasswordError = document.getElementById(
+        "confirmPasswordError"
+      );
+
+      // Clear previous errors
+      emailError.textContent = "";
+      passwordError.textContent = "";
+      confirmPasswordError.textContent = "";
+
+      let valid = true;
+
+      // Email validation
+      const emailValue = emailField.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailValue) {
+        emailError.textContent = "Email is required.";
+        valid = false;
+      } else if (!emailPattern.test(emailValue)) {
+        emailError.textContent = "Please enter a valid email address.";
+        valid = false;
+      }
+
+      // Password validation
+      const passwordValue = newPasswordField.value.trim();
+      if (!passwordValue) {
+        passwordError.textContent = "New password is required.";
+        valid = false;
+      } else if (passwordValue.length < 6) {
+        passwordError.textContent =
+          "Password must be at least 6 characters long.";
+        valid = false;
+      }
+
+      // Confirm Password validation
+      const confirmPasswordValue = confirmPasswordField.value.trim();
+      if (!confirmPasswordValue) {
+        confirmPasswordError.textContent = "Please confirm your password.";
+        valid = false;
+      } else if (passwordValue !== confirmPasswordValue) {
+        confirmPasswordError.textContent = "Passwords do not match.";
+        valid = false;
+      }
+
+      if (valid) {
+        alert("Password reset successful!");
+      }
+    });
+  });
+</script>
+
+<!-- Two factor auhtentication page js -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const twoFactorForm = document.getElementById("twoFactorForm");
+
+    twoFactorForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const otpField = document.getElementById("otpCode");
+      const otpError = document.getElementById("otpError");
+
+      // Clear previous errors
+      otpError.textContent = "";
+
+      // OTP validation
+      const otpValue = otpField.value.trim();
+      const otpPattern = /^\d{6}$/;
+
+      if (!otpValue) {
+        otpError.textContent = "Authentication code is required.";
+      } else if (!otpPattern.test(otpValue)) {
+        otpError.textContent = "Please enter a valid 6-digit code.";
+      } else {
+        alert("Authentication successful!");
+        // Submit form or perform AJAX request
+      }
+    });
+  });
+</script>
