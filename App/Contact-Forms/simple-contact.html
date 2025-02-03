@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- contact form 1 -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <h2 class="heading-section">Contact Form #01</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="card p-4 contact-section">
+            <div class="row">
+              <!-- Contact Form Section -->
+              <div class="col-md-7 d-flex align-items-stretch">
+                <div class="contact-wrap w-100 p-md-5 p-4">
+                  <h3 class="mb-4">Get in Touch</h3>
+                  <!-- <div id="form-message-warning" class="mb-4"></div>
+                    <div id="form-message-success" class="mb-4">
+                      Your message was sent, thank you!
+                    </div> -->
+
+                  <form method="POST" id="contactForm" name="contactForm">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="name"
+                            id="name"
+                            placeholder="Name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            id="email"
+                            placeholder="Email"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="subject"
+                            id="subject"
+                            placeholder="Subject"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <textarea
+                            name="message"
+                            class="form-control"
+                            id="message"
+                            cols="30"
+                            rows="5"
+                            placeholder="Message"
+                            required
+                          ></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input
+                            type="submit"
+                            value="Send Message"
+                            class="btn btn-primary w-100"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Contact Info Section -->
+              <div class="col-md-5 d-flex align-items-stretch">
+                <div class="info-wrap w-100 p-lg-5 p-4 bg-primary text-white">
+                  <h3 class="mb-4 mt-md-4">Contact Information</h3>
+
+                  <div class="d-flex align-items-start mb-3">
+                    <div class="icon">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span>Address:</span> 198 West 21th Street, Suite 721,
+                        New York NY 10016
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-start mb-3">
+                    <div class="icon">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span>Phone:</span>
+                        <a href="tel://1234567920">+1235 2355 98</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-start mb-3">
+                    <div class="icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span>Email:</span>
+                        <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-start">
+                    <div class="icon">
+                      <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="text">
+                      <p>
+                        <span>Website:</span> <a href="#">www.yoursite.com</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-arrow">
+              <div class="card-arrow-top-left"></div>
+              <div class="card-arrow-top-right"></div>
+              <div class="card-arrow-bottom-left"></div>
+              <div class="card-arrow-bottom-right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact form 2 -->
+    <div class="container my-3">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <h2 class="heading-section">Contact Form #02</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="card contact-card">
+            <div class="card-header text-center pb-0">
+              <h3>Contact Us</h3>
+            </div>
+
+            <div class="card-body">
+              <form>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="name" class="form-label text-dark"
+                        >Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="email" class="form-label text-dark"
+                        >Email Address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="phone" class="form-label text-dark"
+                        >Phone Number (Optional)</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        placeholder="e.g. +1234567890"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="subject" class="form-label text-dark"
+                        >Subject/Topic</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="subject"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="message" class="form-label text-dark"
+                        >Message/Inquiry</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        rows="4"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mb-3">
+                      <label class="form-label text-dark"
+                        >Preferred Contact Method</label
+                      >
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="contactMethod"
+                          id="emailMethod"
+                          value="email"
+                          required
+                        />
+                        <label
+                          class="form-check-label text-dark"
+                          for="emailMethod"
+                          >Email</label
+                        >
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="contactMethod"
+                          id="phoneMethod"
+                          value="phone"
+                        />
+                        <label
+                          class="form-check-label text-dark"
+                          for="phoneMethod"
+                          >Phone</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mb-3">
+                      <label for="reason" class="form-label text-dark"
+                        >Reason for Contact</label
+                      >
+                      <select class="form-select" id="reason" required>
+                        <option value="" selected>Select an option</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="mb-3">
+                      <label for="attachment" class="form-label text-dark"
+                        >Attachment Upload (Optional)</label
+                      >
+                      <input type="file" class="form-control" id="attachment" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="captcha" class="form-label text-dark"
+                        >Captcha (Enter 1234)</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="captcha"
+                        placeholder="Type 1234 to verify"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="mb-3 form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="consentCheckbox"
+                        required
+                      />
+                      <label
+                        class="form-check-label text-dark"
+                        for="consentCheckbox"
+                      >
+                        I agree to the privacy policy and terms of service.
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  Submit
+                </button>
+              </form>
+            </div>
+
+            <div class="card-footer text-center text-muted">
+              <small>&copy; 2025 Your Company. All rights reserved.</small>
+            </div>
+            <div class="card-arrow">
+              <div class="card-arrow-top-left"></div>
+              <div class="card-arrow-top-right"></div>
+              <div class="card-arrow-bottom-left"></div>
+              <div class="card-arrow-bottom-right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact form 3 -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mb-5">
+          <h2 class="heading-section">Contact Form #03</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="card">
+          <div class="row g-0">
+            <!-- Form Section -->
+            <div class="col-md-6">
+              <h4 class="card-header text-center mb-3">Contact Us</h4>
+              <div class="card-body">
+                <form>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your Name"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="mb-3">
+                        <label for="email" class="form-label"
+                          >Email Address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your Email"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-3">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="subject"
+                          placeholder="Subject"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          rows="4"
+                          placeholder="Your Message"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="col-md-6 p-2">
+              <div
+                class="map-container"
+                style="
+                  height: 100%;
+                  border-radius: 0 8px 8px 0;
+                  overflow: hidden;
+                "
+              >
+                <iframe
+                  class="w-100 h-100"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509533!2d144.953736315318!3d-37.81627977975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f6fbc4b7%3A0xf07c4d7c0a4f29ec!2sMelbourne%20Central!5e0!3m2!1sen!2sau!4v1615424671514!5m2!1sen!2sau"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-muted text-center">
+            We'll get back to you within 24-48 hours.
+          </div>
+          <div class="card-arrow">
+            <div class="card-arrow-top-left"></div>
+            <div class="card-arrow-top-right"></div>
+            <div class="card-arrow-bottom-left"></div>
+            <div class="card-arrow-bottom-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @media (max-width: 768px) {
+        .map-container {
+          height: 300px;
+          border-radius: 0;
+        }
+      }
+    </style>
+  </body>
+</html>
