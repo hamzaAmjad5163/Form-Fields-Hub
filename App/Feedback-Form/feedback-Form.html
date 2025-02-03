@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="card">
+            <!-- Card Header -->
+            <div class="card-header text-center">
+              <h4 class="mb-0">Feedback Form</h4>
+            </div>
+
+            <!-- Card Body -->
+            <div class="card-body">
+              <form>
+                <div class="row g-3">
+                  <!-- Name and Email -->
+                  <div class="col-md-6">
+                    <label for="name" class="form-label text-dark">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label text-dark">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Your Email"
+                    />
+                  </div>
+
+                  <!-- Rating Scale -->
+                  <div class="col-md-6">
+                    <label for="rating" class="form-label text-dark"
+                      >Overall Satisfaction (1-5)</label
+                    >
+                    <select class="form-select" id="rating">
+                      <option selected disabled>Choose a rating...</option>
+                      <option value="1">1 - Very Dissatisfied</option>
+                      <option value="2">2 - Dissatisfied</option>
+                      <option value="3">3 - Neutral</option>
+                      <option value="4">4 - Satisfied</option>
+                      <option value="5">5 - Very Satisfied</option>
+                    </select>
+                  </div>
+
+                  <!-- Feedback Type -->
+                  <div class="col-md-6">
+                    <label for="feedback-type" class="form-label text-dark"
+                      >Feedback Type</label
+                    >
+                    <select class="form-select" id="feedback-type">
+                      <option selected disabled>Select Feedback Type...</option>
+                      <option value="product">Product Feedback</option>
+                      <option value="website">Website Feedback</option>
+                      <option value="customer-service">
+                        Customer Service Feedback
+                      </option>
+                    </select>
+                  </div>
+
+                  <!-- Comments/Message -->
+                  <div class="col-md-12">
+                    <label for="comments" class="form-label text-dark"
+                      >Comments/Suggestions</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="comments"
+                      rows="4"
+                      placeholder="Your feedback..."
+                    ></textarea>
+                  </div>
+
+                  <!-- Suggestions for Improvement -->
+                  <div class="col-md-12">
+                    <label for="improvement" class="form-label text-dark"
+                      >Suggestions for Improvement</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="improvement"
+                      rows="3"
+                      placeholder="How can we improve?"
+                    ></textarea>
+                  </div>
+
+                  <!-- Follow-Up Permission -->
+                  <div class="col-md-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="follow-up-permission"
+                      />
+                      <label
+                        class="form-check-label text-dark"
+                        for="follow-up-permission"
+                      >
+                        I am willing to be contacted for further discussion.
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- CAPTCHA -->
+                  <div class="col-md-12">
+                    <label for="captcha" class="form-label text-dark"
+                      >CAPTCHA (Type: 7 + 3)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="captcha"
+                      placeholder="Your Answer"
+                    />
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary w-100">
+                      Submit Feedback
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Card Footer -->
+            <div class="card-footer text-center text-muted">
+              Thank you for sharing your valuable feedback!
+            </div>
+            <div class="card-arrow">
+                <div class="card-arrow-top-left"></div>
+                <div class="card-arrow-top-right"></div>
+                <div class="card-arrow-bottom-left"></div>
+                <div class="card-arrow-bottom-right"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
