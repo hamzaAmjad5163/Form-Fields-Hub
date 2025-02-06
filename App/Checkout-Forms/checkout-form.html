@@ -1,0 +1,1122 @@
+<div class="row justify-content-center">
+  <!-- From 1 -->
+  <div class="col-md-6">
+    <h3>Form #01</h3>
+    <div class="card">
+      <div class="card-header text-center">Subscription Form</div>
+      <div class="card-body">
+        <div class="row mb-3 gap-1">
+          <div class="col text-dark" style="border: 1px solid black">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="billingOption"
+                id="monthly"
+                value="monthly"
+              />
+              <label class="form-check-label" for="monthly">
+                Monthly<br />PKR 500/month
+              </label>
+            </div>
+          </div>
+          <div class="col text-dark" style="border: 1px solid black">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="billingOption"
+                id="yearly"
+                value="yearly"
+                checked
+              />
+              <label class="form-check-label" for="yearly">
+                Yearly<br />PKR 4000/year
+                <span class="text-success">Save PKR 1000</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <h5 class="text-center text-dark">Total billed PKR50</h5>
+        <p class="text-center text-dark mb-3">
+          Enter your credit card details to complete subscription
+        </p>
+        <form class="text-dark">
+          <div class="form-group mb-3">
+            <label for="cardNumber">Card number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cardNumber"
+              placeholder="1234 1234 1234 1234"
+            />
+          </div>
+          <div class="row">
+            <div class="form-group col-6 mb-3">
+              <label for="expirationDate">Expiration date</label>
+              <input
+                type="text"
+                class="form-control"
+                id="expirationDate"
+                placeholder="MM/YY"
+              />
+            </div>
+            <div class="form-group col-6 mb-3">
+              <label for="securityCode">Security code</label>
+              <input
+                type="text"
+                class="form-control"
+                id="securityCode"
+                placeholder="123"
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 btn-block">
+            Pay Now
+          </button>
+        </form>
+      </div>
+      <div class="card-footer text-center">
+        By subscribing you agree to our Use of Service. Your payment method will
+        be charged with PKR 500 and you'll have access to all locked features
+        until the end of the year.
+      </div>
+      <div class="card-arrow">
+        <div class="card-arrow-top-left"></div>
+        <div class="card-arrow-top-right"></div>
+        <div class="card-arrow-bottom-left"></div>
+        <div class="card-arrow-bottom-right"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Form 2 -->
+  <div class="col-md-12">
+    <h3>Form #02</h3>
+    <div class="row">
+      <!-- Left Side Form -->
+      <div class="col-lg-8">
+        <!-- Shipping Address Section -->
+        <div class="card mb-4 text-dark">
+          <div class="card-header">Shipping Address</div>
+          <div class="card-body">
+            <div id="address-container">
+              <!-- Initial Address Form (No Close Button) -->
+              <div class="address-card text-dark border p-3 rounded mb-3">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <p><strong>Name:</strong> Cindy K Johnson</p>
+                    <p><strong>Phone:</strong> (573) 686-3703</p>
+                    <p>
+                      <strong>Address:</strong> 1510 Seifert Dr, Poplar Bluff,
+                      63901, Munich, Germany
+                    </p>
+                  </div>
+                  <button class="btn btn-outline-primary btn-sm">Edit</button>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="text-primary d-block mt-2" id="add-address-btn"
+              >+ Add New Address</a
+            >
+          </div>
+          <div class="card-arrow">
+            <div class="card-arrow-top-left"></div>
+            <div class="card-arrow-top-right"></div>
+            <div class="card-arrow-bottom-left"></div>
+            <div class="card-arrow-bottom-right"></div>
+          </div>
+        </div>
+
+        <!-- Payment Method Section -->
+        <div class="card mb-3 text-dark">
+          <div class="card-header">Payment Method</div>
+          <div class="card-body text-dark">
+            <div class="row">
+              <div class="col-md-12 payment-icons mb-3">
+                <img
+                  src="https://img.icons8.com/color/50/visa.png"
+                  alt="Visa"
+                />
+                <img
+                  src="https://img.icons8.com/color/50/mastercard.png"
+                  alt="MasterCard"
+                />
+                <img
+                  src="https://img.icons8.com/color/50/paypal.png"
+                  alt="PayPal"
+                />
+                <img
+                  src="https://img.icons8.com/color/50/apple-pay.png"
+                  alt="Apple Pay"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cardNumber" class="form-label">Card Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardNumber"
+                  placeholder="xxxx xxxx xxxx xxxx"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cardHolder" class="form-label"
+                  >Card Holder Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardHolder"
+                  placeholder="Name on Card"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="validThru" class="form-label">Valid Thru</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validThru"
+                  placeholder="MM/YY"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cvv" class="form-label">CVV / CVC</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cvv"
+                  placeholder="XXX"
+                />
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="saveCard"
+                  />
+                  <label class="form-check-label" for="saveCard">
+                    Save Card
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-end text-dark">
+            <button class="btn btn-outline-primary">Confirm</button>
+          </div>
+          <div class="card-arrow">
+            <div class="card-arrow-top-left"></div>
+            <div class="card-arrow-top-right"></div>
+            <div class="card-arrow-bottom-left"></div>
+            <div class="card-arrow-bottom-right"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side Order Summary -->
+      <div class="col-lg-4">
+        <div class="card order-summary h-100 mb-3">
+          <div class="card-header text-dark">Order Summary</div>
+          <div class="card-body text-dark">
+            <p><strong>Order Price:</strong> 132.12 PKR</p>
+            <p><strong>Shipping:</strong> 30.89 PKR</p>
+            <p><strong>Tax:</strong> 0.89 PKR</p>
+            <p><strong>Seller Discount:</strong> 0.00 PKR</p>
+            <hr />
+            <h5>Total: 137.00 PKR</h5>
+            <div class="text-center my-3">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="QR Code"
+              />
+              <p class="text-muted mt-2">Pay and Confirm Order using QR Code</p>
+            </div>
+          </div>
+          <div class="card-footer text-dark">
+            <button class="btn btn-outline-primary w-100">
+              Review and Confirm
+            </button>
+          </div>
+          <div class="card-arrow">
+            <div class="card-arrow-top-left"></div>
+            <div class="card-arrow-top-right"></div>
+            <div class="card-arrow-bottom-left"></div>
+            <div class="card-arrow-bottom-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Form 3 -->
+  <div class="col-md-12">
+    <h3>Form #03</h3>
+    <div class="container my-5">
+      <div class="card">
+        <div class="card-header text-center text-dark">
+          <h2>Checkout Process</h2>
+        </div>
+        <div class="card-body">
+          <div class="progress mb-4">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              style="width: 25%"
+              id="progressBar"
+            >
+              Step 1 of 4
+            </div>
+          </div>
+          <form id="multiStepForm">
+            <!-- Step 1: Account -->
+            <div class="step active text-dark">
+              <h4>User Information</h4>
+
+              <!-- Row for user information -->
+              <div class="row g-3">
+                <!-- Full Name -->
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fullName"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Email Address -->
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Phone Number -->
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="phoneNumber" class="form-label"
+                      >Phone Number</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phoneNumber"
+                      placeholder="Enter your phone number"
+                      required
+                    />
+                  </div>
+                </div>
+                <!-- Postal Code -->
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="postalCode" class="form-label"
+                      >Postal Code</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="postalCode"
+                      placeholder="Enter your postal code"
+                      required
+                    />
+                  </div>
+                </div>
+                <!-- Address -->
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address"
+                      placeholder="Street address, P.O. Box"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- CNIC -->
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="cnic" class="form-label">CNIC</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cnic"
+                      placeholder="Enter your CNIC (XXXXX-XXXXXXX-X)"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Step 2: Shipping -->
+            <div class="step text-dark">
+              <h4>Shipping Address</h4>
+
+              <!-- Reciever Name -->
+              <div class="mb-3 text-dark">
+                <label for="shippingName">Receiver Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="shippingName"
+                  placeholder="Enter receiver's name"
+                />
+              </div>
+
+              <!-- Who is going to pick the parcel -->
+              <div class="mb-3 text-dark">
+                <label for="pickupPerson"
+                  >Who is going to pick up the parcel?</label
+                >
+                <select class="form-select" id="pickupPerson">
+                  <option value="self">I will pick up the parcel</option>
+                  <option value="other">
+                    Other person will pick up the parcel
+                  </option>
+                </select>
+              </div>
+
+              <!-- Other person's details -->
+              <div id="otherDetails" style="display: none">
+                <div class="mb-3 text-dark">
+                  <label for="otherName">Other Person's Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="otherName"
+                    placeholder="Enter other person's name"
+                  />
+                </div>
+
+                <div class="mb-3 text-dark">
+                  <label for="otherPhone">Other Person's Phone Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="otherPhone"
+                    placeholder="Enter other person's phone number"
+                  />
+                </div>
+
+                <div class="mb-3 text-dark">
+                  <label for="relation">Relation to Client/Customer</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="relation"
+                    placeholder="Enter relation (e.g., friend, colleague)"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Modal -->
+            <div
+              class="modal"
+              id="paymentModal"
+              tabindex="-1"
+              aria-labelledby="paymentModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">
+                      Enter Payment Details
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="cardNumber" class="form-label"
+                          >Card Number</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardNumber"
+                          placeholder="1234 5678 9012 3456"
+                          required
+                        />
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label for="expiryDate" class="form-label"
+                            >Expiry Date</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="expiryDate"
+                            placeholder="MM/YY"
+                            required
+                          />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label for="cvc" class="form-label">CVC</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="cvc"
+                            placeholder="123"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="cardHolderName" class="form-label"
+                          >Cardholder Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardHolderName"
+                          placeholder="John Doe"
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      id="purchaseButton"
+                    >
+                      Purchase
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <style>
+              .item-scroller {
+                max-height: 300px;
+                overflow-y: auto;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 10px;
+              }
+              .item-scroller .card {
+                margin-bottom: 10px;
+              }
+              .quantity-control {
+                display: flex;
+                align-items: center;
+              }
+              .quantity-control button {
+                background: none;
+                border: 1px solid #ddd;
+                padding: 5px 10px;
+                cursor: pointer;
+              }
+              .quantity-control input {
+                width: 50px;
+                text-align: center;
+                border: 1px solid #ddd;
+                margin: 0 5px;
+              }
+            </style>
+
+            <!-- Step 3: Payment -->
+            <div class="step text-dark">
+              <div class="row">
+                <div class="col-md-4" style="height: 300px; overflow-y: auto">
+                  <!-- Item Card -->
+                  <div class="card mb-3">
+                    <div class="card-header">
+                      <h5 class="card-title">Item Name</h5>
+                      <div class="card-options">
+                        <button
+                          class="btn btn-sm btn-outline-primary"
+                          id="editItem"
+                        >
+                          <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button
+                          class="btn btn-sm btn-outline-danger"
+                          id="deleteItem"
+                        >
+                          <i class="fas fa-trash"></i> Delete
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        This is a description of the item. It could be a brief
+                        explanation or details about the item.
+                      </p>
+
+                      <div class="d-flex align-items-center">
+                        <!-- Decrement Button -->
+                        <button
+                          class="btn btn-outline-secondary"
+                          id="decrementItem"
+                        >
+                          <i class="fas fa-minus"></i>
+                        </button>
+
+                        <!-- Item Quantity -->
+                        <span class="mx-3" id="itemQuantity">1</span>
+
+                        <!-- Increment Button -->
+                        <button
+                          class="btn btn-outline-secondary"
+                          id="incrementItem"
+                        >
+                          <i class="fas fa-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-arrow">
+                      <div class="card-arrow-top-left"></div>
+                      <div class="card-arrow-top-right"></div>
+                      <div class="card-arrow-bottom-left"></div>
+                      <div class="card-arrow-bottom-right"></div>
+                    </div>
+                  </div>
+
+                  <!-- Another Item Card -->
+                  <div class="card mb-3">
+                    <div class="card-header">
+                      <h5 class="card-title">Item Name 2</h5>
+                      <div class="card-options">
+                        <button
+                          class="btn btn-sm btn-outline-primary"
+                          id="editItem2"
+                        >
+                          <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button
+                          class="btn btn-sm btn-outline-danger"
+                          id="deleteItem2"
+                        >
+                          <i class="fas fa-trash"></i> Delete
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        This is another item description. More details can go
+                        here.
+                      </p>
+
+                      <div class="d-flex align-items-center">
+                        <!-- Decrement Button -->
+                        <button
+                          class="btn btn-outline-secondary"
+                          id="decrementItem2"
+                        >
+                          <i class="fas fa-minus"></i>
+                        </button>
+
+                        <!-- Item Quantity -->
+                        <span class="mx-3" id="itemQuantity2">1</span>
+
+                        <!-- Increment Button -->
+                        <button
+                          class="btn btn-outline-secondary"
+                          id="incrementItem2"
+                        >
+                          <i class="fas fa-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="card-arrow">
+                      <div class="card-arrow-top-left"></div>
+                      <div class="card-arrow-top-right"></div>
+                      <div class="card-arrow-bottom-left"></div>
+                      <div class="card-arrow-bottom-right"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <h4>Payment Information</h4>
+
+                  <!-- Payment Method Selection with Icons -->
+                  <div class="mb-3 text-dark">
+                    <label for="paymentMethod">Select Payment Method</label>
+                    <div class="d-flex justify-content-around">
+                      <button
+                        type="button"
+                        class="btn payment-method-btn btn-outline-primary"
+                        data-method="paypal"
+                      >
+                        <i class="fab fa-cc-paypal"></i> PayPal
+                      </button>
+                      <button
+                        type="button"
+                        class="btn payment-method-btn btn-outline-primary"
+                        data-method="creditCard"
+                      >
+                        <i class="fab fa-cc-visa"></i> Credit Card
+                      </button>
+                      <button
+                        type="button"
+                        class="btn payment-method-btn btn-outline-success"
+                        data-method="easypaisa"
+                      >
+                        <i class="fas fa-wallet"></i> Easypaisa
+                      </button>
+                      <button
+                        type="button"
+                        class="btn payment-method-btn btn-outline-danger"
+                        data-method="jazzcash"
+                      >
+                        <i class="fas fa-wallet"></i> JazzCash
+                      </button>
+                      <button
+                        type="button"
+                        class="btn payment-method-btn btn-outline-secondary"
+                        data-method="cod"
+                      >
+                        <i class="fas fa-truck"></i> Cash on Delivery
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- PayPal Details -->
+                  <div
+                    class="payment-method-details"
+                    id="paypalDetails"
+                    style="display: none"
+                  >
+                    <h5>PayPal Details</h5>
+                    <div class="mb-3 text-dark">
+                      <label for="paypalEmail">PayPal Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="paypalEmail"
+                        placeholder="Enter your PayPal email"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Credit/Debit Card Details -->
+                  <div
+                    class="payment-method-details"
+                    id="creditCardDetails"
+                    style="display: none"
+                  >
+                    <h5>Credit or Debit Card Details</h5>
+                    <div class="row">
+                      <div class="col-md-12 mb-3 text-dark">
+                        <label for="cardNumber">Card Number</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardNumber"
+                          placeholder="1234 5678 9012 3456"
+                        />
+                      </div>
+                      <div class="col-md-12 mb-3 text-dark">
+                        <label for="cardName">Name on Card</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardName"
+                          placeholder="Enter your name on card"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3 text-dark">
+                        <label for="cardExpiration">Expiration Date</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardExpiration"
+                          placeholder="MM/YY"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3 text-dark">
+                        <label for="cardCvc">CVC/CVV</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="cardCvc"
+                          placeholder="CVC/CVV"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Easypaisa Payment -->
+                  <div
+                    class="payment-method-details"
+                    id="easypaisaDetails"
+                    style="display: none"
+                  >
+                    <h5>Easypaisa Details</h5>
+                    <div class="row">
+                      <div class="col-md-6 mb-3 text-dark">
+                        <label for="easypaisaNumber">Easypaisa Number</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="easypaisaNumber"
+                          placeholder="Enter your Easypaisa number"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3 text-dark">
+                        <label for="easypaisaPin">Easypaisa Pin</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="easypaisaPin"
+                          placeholder="Enter your Easypaisa pin"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- JazzCash Payment -->
+                  <div
+                    class="payment-method-details"
+                    id="jazzcashDetails"
+                    style="display: none"
+                  >
+                    <h5>JazzCash Details</h5>
+                    <div class="row">
+                      <div class="col-md-6 mb-3 text-dark">
+                        <label for="jazzcashNumber">JazzCash Number</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="jazzcashNumber"
+                          placeholder="Enter your JazzCash number"
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3 text-dark">
+                        <label for="jazzcashPin">JazzCash Pin</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="jazzcashPin"
+                          placeholder="Enter your JazzCash pin"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Cash on Delivery -->
+                  <div
+                    class="payment-method-details"
+                    id="codDetails"
+                    style="display: none"
+                  >
+                    <h5>Cash on Delivery</h5>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="mb-3 text-dark">
+                          <label for="codNote"
+                            >Any special instructions for delivery?</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="codNote"
+                            placeholder="Enter any instructions (e.g., address landmarks)"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                id="prevBtn"
+                disabled
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                id="nextBtn"
+              >
+                Next
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer text-center">
+          <p>Total: <strong>$37.98</strong></p>
+          <button type="button" class="btn btn-success" id="submitBtn" disabled>
+            Review and Confirm
+          </button>
+        </div>
+        <div class="card-arrow">
+          <div class="card-arrow-top-left"></div>
+          <div class="card-arrow-top-right"></div>
+          <div class="card-arrow-bottom-left"></div>
+          <div class="card-arrow-bottom-right"></div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .step {
+        display: none;
+      }
+      .step.active {
+        display: block;
+      }
+    </style>
+  </div>
+  <script>
+    document
+      .getElementById("add-address-btn")
+      .addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const addressContainer = document.getElementById("address-container");
+
+        const newAddressCard = document.createElement("div");
+        newAddressCard.className = "address-card mb-3 border p-3 rounded";
+
+        newAddressCard.innerHTML = `
+        <div class="row">
+          <div class="col-2">
+            <button class="form-control border-danger text-danger close-btn">Delete</button>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <button class="btn btn-outline-primary btn-sm">Edit</button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-start mt-3">
+          <div class="text-dark">
+            <p><strong>Name:</strong> Enter New Name</p>
+            <p><strong>Phone:</strong> Enter New Phone</p>
+            <p><strong>Address:</strong> Enter New Address</p>
+          </div>
+        </div>
+      `;
+
+        // Attach delete event to the delete button
+        newAddressCard
+          .querySelector(".close-btn")
+          .addEventListener("click", function () {
+            newAddressCard.remove();
+          });
+
+        addressContainer.appendChild(newAddressCard);
+      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- multi step form -->
+  <script>
+    const steps = document.querySelectorAll(".step");
+    const progressBar = document.getElementById("progressBar");
+    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    const submitBtn = document.getElementById("submitBtn");
+    const paymentMethod = document.getElementById("paymentMethod");
+    const cardDetails = document.querySelectorAll("#cardDetails");
+    let currentStep = 0;
+
+    nextBtn.addEventListener("click", () => {
+      steps[currentStep].classList.remove("active");
+      currentStep++;
+      steps[currentStep].classList.add("active");
+      updateButtons();
+      updateProgressBar();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      steps[currentStep].classList.remove("active");
+      currentStep--;
+      steps[currentStep].classList.add("active");
+      updateButtons();
+      updateProgressBar();
+    });
+
+    paymentMethod.addEventListener("change", (e) => {
+      if (e.target.value === "creditCard") {
+        cardDetails.forEach((detail) => (detail.style.display = "block"));
+      } else {
+        cardDetails.forEach((detail) => (detail.style.display = "none"));
+      }
+    });
+
+    function updateButtons() {
+      prevBtn.disabled = currentStep === 0;
+      nextBtn.style.display =
+        currentStep === steps.length - 1 ? "none" : "inline-block";
+      submitBtn.disabled = currentStep !== steps.length - 1;
+    }
+
+    function updateProgressBar() {
+      const progress = ((currentStep + 1) / steps.length) * 100;
+      progressBar.style.width = `${progress}%`;
+      progressBar.innerText = `Step ${currentStep + 1} of ${steps.length}`;
+    }
+  </script>
+
+  <!-- form 3 -->
+
+  <script>
+    // Increment and Decrement Logic
+    document.querySelectorAll(".increment").forEach((button) => {
+      button.addEventListener("click", () => {
+        const input = button.parentElement.querySelector("input");
+        input.value = parseInt(input.value) + 1;
+      });
+    });
+
+    document.querySelectorAll(".decrement").forEach((button) => {
+      button.addEventListener("click", () => {
+        const input = button.parentElement.querySelector("input");
+        if (parseInt(input.value) > 1) {
+          input.value = parseInt(input.value) - 1;
+        }
+      });
+    });
+
+    // Purchase Button Logic
+    document.getElementById("purchaseButton").addEventListener("click", () => {
+      const cardNumber = document.getElementById("cardNumber").value;
+      const expiryDate = document.getElementById("expiryDate").value;
+      const cvc = document.getElementById("cvc").value;
+      const cardHolderName = document.getElementById("cardHolderName").value;
+
+      if (cardNumber && expiryDate && cvc && cardHolderName) {
+        alert("Payment successful! Thank you for your purchase.");
+        // Close the modal
+        const modal = bootstrap.Modal.getInstance(
+          document.getElementById("paymentModal")
+        );
+        modal.hide();
+      } else {
+        alert("Please fill in all the required fields.");
+      }
+    });
+  </script>
+
+  <!-- Script to show additional fields for "Other" -->
+  <script>
+    document
+      .getElementById("pickupPerson")
+      .addEventListener("change", function () {
+        var otherDetails = document.getElementById("otherDetails");
+        if (this.value === "other") {
+          otherDetails.style.display = "block";
+        } else {
+          otherDetails.style.display = "none";
+        }
+      });
+  </script>
+  <!-- payment information -->
+  <script>
+    // Handle the dynamic showing and hiding of payment method details
+    document.querySelectorAll(".payment-method-btn").forEach((button) => {
+      button.addEventListener("click", function () {
+        const method = this.getAttribute("data-method");
+
+        // Hide all details
+        document
+          .querySelectorAll(".payment-method-details")
+          .forEach((detail) => {
+            detail.style.display = "none";
+          });
+
+        // Show the relevant details
+        document.getElementById(`${method}Details`).style.display = "block";
+      });
+    });
+  </script>
+
+  <script>
+    // Handling increment and decrement of item quantity for the first item
+    document
+      .getElementById("incrementItem")
+      .addEventListener("click", function () {
+        let quantity = parseInt(
+          document.getElementById("itemQuantity").textContent
+        );
+        document.getElementById("itemQuantity").textContent = quantity + 1;
+      });
+
+    document
+      .getElementById("decrementItem")
+      .addEventListener("click", function () {
+        let quantity = parseInt(
+          document.getElementById("itemQuantity").textContent
+        );
+        if (quantity > 1) {
+          document.getElementById("itemQuantity").textContent = quantity - 1;
+        }
+      });
+
+    // Handling increment and decrement for the second item
+    document
+      .getElementById("incrementItem2")
+      .addEventListener("click", function () {
+        let quantity = parseInt(
+          document.getElementById("itemQuantity2").textContent
+        );
+        document.getElementById("itemQuantity2").textContent = quantity + 1;
+      });
+
+    document
+      .getElementById("decrementItem2")
+      .addEventListener("click", function () {
+        let quantity = parseInt(
+          document.getElementById("itemQuantity2").textContent
+        );
+        if (quantity > 1) {
+          document.getElementById("itemQuantity2").textContent = quantity - 1;
+        }
+      });
+
+    // Handle Edit and Delete buttons for both items
+    document.getElementById("editItem").addEventListener("click", function () {
+      alert("Edit Item 1 clicked!");
+    });
+
+    document
+      .getElementById("deleteItem")
+      .addEventListener("click", function () {
+        alert("Delete Item 1 clicked!");
+      });
+
+    document.getElementById("editItem2").addEventListener("click", function () {
+      alert("Edit Item 2 clicked!");
+    });
+
+    document
+      .getElementById("deleteItem2")
+      .addEventListener("click", function () {
+        alert("Delete Item 2 clicked!");
+      });
+  </script>
+</div>
