@@ -1,0 +1,336 @@
+<div class="container my-5">
+  <div class="row justify-content-center g-5">
+    <!-- subscription form 1 -->
+    <div class="col-6">
+        <h1>Form #01</h1>
+      <div class="card shadow-lg">
+        <!-- Card Header -->
+        <div class="card-header text-dark text-center py-3">
+          <h3 class="mb-0">Subscribe to Our Newsletter</h3>
+          <p class="mb-0 text-muted">
+            Stay updated with the latest news and offers
+          </p>
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body">
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label text-dark"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label text-dark"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <label for="email" class="form-label text-dark"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <label for="preferences" class="form-label text-dark"
+                  >Your Interests</label
+                >
+                <select class="form-select" id="preferences">
+                  <option selected>Choose an interest...</option>
+                  <option value="1">Technology</option>
+                  <option value="2">Health</option>
+                  <option value="3">Finance</option>
+                  <option value="4">Travel</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-md-12">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="consentCheck"
+                    required
+                  />
+                  <label class="form-check-label text-dark" for="consentCheck">
+                    I agree to receive email updates from this website.
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-dark w-100">Subscribe</button>
+          </form>
+        </div>
+
+        <!-- Card Footer -->
+        <div class="card-footer text-dark text-center py-2">
+          <small>We respect your privacy. Unsubscribe anytime.</small>
+        </div>
+        <div class="card-arrow">
+          <div class="card-arrow-top-left"></div>
+          <div class="card-arrow-top-right"></div>
+          <div class="card-arrow-bottom-left"></div>
+          <div class="card-arrow-bottom-right"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- subscriptoin form 2 -->
+    <div class="col-6">
+        <h1>Form #02</h1>
+      <div class="card shadow-lg">
+        <!-- Card Header -->
+        <div class="card-header text-dark text-center">
+          <h3>Add Your Teammates</h3>
+          <p class="text-muted mb-0">
+            People you add will receive an invite automatically.
+          </p>
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body">
+          <div class="col-12 mb-3">
+            <!-- Dropdown -->
+            <div class="dropdown">
+                <button class="btn btn-outline-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Select Project
+                </button>
+                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#">Project 1</a></li>
+                  <li><a class="dropdown-item" href="#">Project 2</a></li>
+                  <li><a class="dropdown-item" href="#">Project 3</a></li>
+                </ul>
+              </div>
+          </div>
+
+          <h5 class="text-dark mt-4">Connect from</h5>
+
+          <!-- Social Buttons Row -->
+          <div class="row g-2 mb-4">
+            <div class="col-4">
+              <div
+                class="social bg-white d-flex justify-content-center align-items-center p-2 border rounded"
+              >
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+                  alt="Google"
+                  class="img-fluid"
+                  width="25"
+                />
+                <span class="ms-2">Google</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div
+                class="social bg-white d-flex justify-content-center align-items-center p-2 border rounded"
+              >
+                <img
+                  src="https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg"
+                  alt="Slack"
+                  class="img-fluid"
+                  width="30"
+                />
+                <span class="ms-2">Slack</span>
+              </div>
+            </div>
+            <div class="col-4">
+              <div
+                class="social bg-white d-flex justify-content-center align-items-center p-2 border rounded"
+              >
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZLoNujaqRPu7XFemvBYsB68MD_XPTrK3xqqNYuol8qH9jNmrRu6fe22tKsjGyUI_OApI&usqp=CAU"
+                  alt="Microsoft"
+                  class="img-fluid"
+                  width="20"
+                />
+                <span class="ms-2">Microsoft</span>
+              </div>
+            </div>
+          </div>
+
+          <h6 class="text-dark text-center mb-3">Or</h6>
+
+          <!-- Email Input -->
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter email address"
+            />
+          </div>
+        </div>
+
+        <!-- Card Footer -->
+        <div class="card-footer text-center">
+          <div class="row gx-3">
+            <div class="col">
+              <button class="btn btn-outline-dark w-100">Cancel</button>
+            </div>
+            <div class="col">
+              <button class="btn btn-dark w-100">Add Teammates</button>
+            </div>
+          </div>
+        </div>
+        <div class="card-arrow">
+            <div class="card-arrow-top-left"></div>
+            <div class="card-arrow-top-right"></div>
+            <div class="card-arrow-bottom-left"></div>
+            <div class="card-arrow-bottom-right"></div>
+          </div>
+      </div>
+    </div>
+
+    <!-- subscription form 3 -->
+    <div class="col-12">
+        <h1 class="mb-3">Form #03</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Sign up for Newsletters</h2>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <div class="card-body">
+                    <input type="checkbox" class="form-check-input me-2 text-dark" id="check1">
+                    <label for="check1" class="form-check-label">
+                    <h5 class="card-title text-dark">Daily Bits</h5>
+                    <p class="card-text text-dark">Today’s biggest news</p>
+                    </label>
+                </div>
+                <div class="card-arrow">
+                    <div class="card-arrow-top-left"></div>
+                    <div class="card-arrow-top-right"></div>
+                    <div class="card-arrow-bottom-left"></div>
+                    <div class="card-arrow-bottom-right"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <div class="card-body">
+                    <input type="checkbox" class="form-check-input me-2 text-dark" id="check2">
+                    <label for="check2" class="form-check-label">
+                    <h5 class="card-title text-dark">Week in Review</h5>
+                    <p class="card-text text-dark">The week’s biggest news</p>
+                    </label>
+                </div>
+                <div class="card-arrow">
+                    <div class="card-arrow-top-left"></div>
+                    <div class="card-arrow-top-right"></div>
+                    <div class="card-arrow-bottom-left"></div>
+                    <div class="card-arrow-bottom-right"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <div class="card-body">
+                    <input type="checkbox" class="form-check-input me-2 text-dark" id="check3">
+                    <label for="check3" class="form-check-label">
+                    <h5 class="card-title text-dark">The Exchange</h5>
+                    <p class="card-text text-dark">Art, money, and markets</p>
+                    </label>
+                </div>
+                <div class="card-arrow">
+                    <div class="card-arrow-top-left"></div>
+                    <div class="card-arrow-top-right"></div>
+                    <div class="card-arrow-bottom-left"></div>
+                    <div class="card-arrow-bottom-right"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <div class="card-body">
+                    <input type="checkbox" class="form-check-input me-2 text-dark" id="check4">
+                    <label for="check4" class="form-check-label">
+                    <h5 class="card-title text-dark">Event Updates</h5>
+                    <p class="card-text text-dark">Announcements and discounts</p>
+                    </label>
+                </div>
+                <div class="card-arrow">
+                    <div class="card-arrow-top-left"></div>
+                    <div class="card-arrow-top-right"></div>
+                    <div class="card-arrow-bottom-left"></div>
+                    <div class="card-arrow-bottom-right"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <div class="card-body">
+                    <input type="checkbox" class="form-check-input me-2 text-dark" id="check5">
+                    <label for="check5" class="form-check-label">
+                    <h5 class="card-title text-dark">Sponsorship</h5>
+                    <p class="card-text text-dark">Partnership insights</p>
+                    </label>
+                </div>
+                <div class="card-arrow">
+                    <div class="card-arrow-top-left"></div>
+                    <div class="card-arrow-top-right"></div>
+                    <div class="card-arrow-bottom-left"></div>
+                    <div class="card-arrow-bottom-right"></div>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                <div class="card-body">
+                    <input type="checkbox" class="form-check-input me-2 text-dark" id="check6">
+                    <label for="check6" class="form-check-label">
+                    <h5 class="card-title text-dark">This Week in Art</h5>
+                    <p class="card-text text-dark">Art news of the week</p>
+                    </label>
+                </div>
+                <div class="card-arrow">
+                    <div class="card-arrow-top-left"></div>
+                    <div class="card-arrow-top-right"></div>
+                    <div class="card-arrow-bottom-left"></div>
+                    <div class="card-arrow-bottom-right"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form class="d-flex flex-column flex-md-row gap-3">
+              <input type="email" class="form-control" placeholder="Enter your email address" required>
+              <button type="submit" class="btn btn-dark px-4">Subscribe</button>
+            </form>
+          </div>
+        </div>
+    </div>
+    
+    </html>
+  </div>
+</div>
