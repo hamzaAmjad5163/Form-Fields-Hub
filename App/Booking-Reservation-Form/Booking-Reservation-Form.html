@@ -1,0 +1,116 @@
+<style>
+    label{
+        color: black;
+    }
+</style>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card">
+        <!-- Card Header -->
+        <div class="card-header text-center py-4">
+          <h2 class="mb-0">Booking Reservation Form</h2>
+          <p class="mb-0">Please fill in the details below to complete your reservation.</p>
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body p-4">
+          <form>
+            <!-- Personal Information -->
+            <div class="row mb-4">
+              <div class="col-md-6 mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="John" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
+              </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="row mb-4">
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="john.doe@example.com" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="+92 300 1234567" required>
+              </div>
+            </div>
+
+            <!-- Booking Details -->
+            <div class="row mb-4">
+              <div class="col-md-6 mb-3">
+                <label for="checkInDate" class="form-label">Check-In Date</label>
+                <input type="date" class="form-control" id="checkInDate" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="checkOutDate" class="form-label">Check-Out Date</label>
+                <input type="date" class="form-control" id="checkOutDate" required>
+              </div>
+            </div>
+
+            <!-- Room Selection -->
+            <div class="row mb-4">
+              <div class="col-md-6 mb-3">
+                <label for="roomType" class="form-label">Room Type</label>
+                <select class="form-select" id="roomType" required>
+                  <option value="" disabled selected>Select Room Type</option>
+                  <option value="single">Single Room</option>
+                  <option value="double">Double Room</option>
+                  <option value="suite">Suite</option>
+                  <option value="deluxe">Deluxe Room</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="guests" class="form-label">Number of Guests</label>
+                <input type="number" class="form-control" id="guests" min="1" max="10" placeholder="2" required>
+              </div>
+            </div>
+
+            <!-- Special Requests -->
+            <div class="mb-4">
+              <label for="specialRequests" class="form-label">Special Requests</label>
+              <textarea class="form-control" id="specialRequests" rows="4" placeholder="Any special requests?"></textarea>
+            </div>
+
+            <!-- Payment Information -->
+            <div class="mb-4">
+              <label class="form-label">Payment Method</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" value="creditCard" required>
+                  <label class="form-check-label" for="creditCard">Credit Card</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="paypal" value="paypal">
+                  <label class="form-check-label" for="paypal">PayPal</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="cash" value="cash">
+                  <label class="form-check-label" for="cash">Cash on Arrival</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Confirm Reservation</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Card Footer -->
+        <div class="card-footer text-center py-3">
+          <p class="mb-0">Need help? <a href="#" class="text-decoration-none">Contact Us</a></p>
+        </div>
+        <div class="card-arrow">
+            <div class="card-arrow-top-left"></div>
+            <div class="card-arrow-top-right"></div>
+            <div class="card-arrow-bottom-left"></div>
+            <div class="card-arrow-bottom-right"></div>
+          </div>
+      </div>
+    </div>
+  </div>
