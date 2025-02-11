@@ -1,0 +1,357 @@
+<style>
+  .cart-item {
+    margin-bottom: 1rem;
+  }
+  .order-summary {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  .order-summary img {
+    max-width: 100%;
+    height: auto;
+  }
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+<div class="container p-4">
+  <!-- Form #01 -->
+  <div class="row">
+    <h3>Form #01</h3>
+    <div class="col-md-8">
+      <h1 class="mb-4">My Cart</h1>
+
+      <!-- Select All & Delete Section -->
+      <div class="row mb-3 align-items-center">
+        <div class="col-6 d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" id="selectAll" />
+          <label for="selectAll" class="form-check-label">Select All</label>
+        </div>
+        <div class="col-6 text-end">
+          <button id="deleteSelected" class="btn btn-dark">
+            <i class="fas fa-trash-alt me-2"></i> Delete Selected
+          </button>
+        </div>
+      </div>
+
+      <!-- Cart Items List -->
+      <div class="card">
+        <div
+          class="card-body scrollbar-hidden"
+          style="max-height: 500px; overflow-y: scroll"
+        >
+          <div id="cartItems">
+            <!-- Example Cart Items -->
+            <div class="mb-3 cart-item" data-price="120.00">
+              <div class="row g-0 align-items-center">
+                <div class="col-auto p-3">
+                  <input
+                    type="checkbox"
+                    class="form-check-input item-checkbox"
+                  />
+                </div>
+                <div class="col-auto">
+                  <img
+                    src="https://via.placeholder.com/70"
+                    class="img-fluid rounded"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="col p-3">
+                  <h5 class="card-title mb-1">Brand A</h5>
+                  <span class="badge bg-secondary">Category 1</span>
+                  <p class="text-muted mb-2">Type: Type 1</p>
+                  <p class="fw-bold mb-0 text-danger">
+                    PKR 120.00
+                    <small class="text-muted text-decoration-line-through"
+                      >PKR 150.00</small
+                    >
+                  </p>
+                </div>
+                <div class="col-auto pe-3">
+                  <button class="btn btn-link text-danger delete-item-btn">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+                <div class="col-auto pe-3">
+                  <div class="input-group">
+                    <button class="btn btn-outline-dark btn-sm decrement-btn">
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm text-center quantity-input"
+                      value="1"
+                      style="max-width: 50px"
+                    />
+                    <button class="btn btn-outline-dark btn-sm increment-btn">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 cart-item" data-price="120.00">
+              <div class="row g-0 align-items-center">
+                <div class="col-auto p-3">
+                  <input
+                    type="checkbox"
+                    class="form-check-input item-checkbox"
+                  />
+                </div>
+                <div class="col-auto">
+                  <img
+                    src="https://via.placeholder.com/70"
+                    class="img-fluid rounded"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="col p-3">
+                  <h5 class="card-title mb-1">Brand A</h5>
+                  <span class="badge bg-secondary">Category 1</span>
+                  <p class="text-muted mb-2">Type: Type 1</p>
+                  <p class="fw-bold mb-0 text-danger">
+                    PKR 120.00
+                    <small class="text-muted text-decoration-line-through"
+                      >PKR 150.00</small
+                    >
+                  </p>
+                </div>
+                <div class="col-auto pe-3">
+                  <button class="btn btn-link text-danger delete-item-btn">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+                <div class="col-auto pe-3">
+                  <div class="input-group">
+                    <button class="btn btn-outline-dark btn-sm decrement-btn">
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm text-center quantity-input"
+                      value="1"
+                      style="max-width: 50px"
+                    />
+                    <button class="btn btn-outline-dark btn-sm increment-btn">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 cart-item" data-price="120.00">
+              <div class="row g-0 align-items-center">
+                <div class="col-auto p-3">
+                  <input
+                    type="checkbox"
+                    class="form-check-input item-checkbox"
+                  />
+                </div>
+                <div class="col-auto">
+                  <img
+                    src="https://via.placeholder.com/70"
+                    class="img-fluid rounded"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="col p-3">
+                  <h5 class="card-title mb-1">Brand A</h5>
+                  <span class="badge bg-secondary">Category 1</span>
+                  <p class="text-muted mb-2">Type: Type 1</p>
+                  <p class="fw-bold mb-0 text-danger">
+                    PKR 120.00
+                    <small class="text-muted text-decoration-line-through"
+                      >PKR 150.00</small
+                    >
+                  </p>
+                </div>
+                <div class="col-auto pe-3">
+                  <button class="btn btn-link text-danger delete-item-btn">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+                <div class="col-auto pe-3">
+                  <div class="input-group">
+                    <button class="btn btn-outline-dark btn-sm decrement-btn">
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm text-center quantity-input"
+                      value="1"
+                      style="max-width: 50px"
+                    />
+                    <button class="btn btn-outline-dark btn-sm increment-btn">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 cart-item" data-price="120.00">
+              <div class="row g-0 align-items-center">
+                <div class="col-auto p-3">
+                  <input
+                    type="checkbox"
+                    class="form-check-input item-checkbox"
+                  />
+                </div>
+                <div class="col-auto">
+                  <img
+                    src="https://via.placeholder.com/70"
+                    class="img-fluid rounded"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="col p-3">
+                  <h5 class="card-title mb-1">Brand A</h5>
+                  <span class="badge bg-secondary">Category 1</span>
+                  <p class="text-muted mb-2">Type: Type 1</p>
+                  <p class="fw-bold mb-0 text-danger">
+                    PKR 120.00
+                    <small class="text-muted text-decoration-line-through"
+                      >PKR 150.00</small
+                    >
+                  </p>
+                </div>
+                <div class="col-auto pe-3">
+                  <button class="btn btn-link text-danger delete-item-btn">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+                <div class="col-auto pe-3">
+                  <div class="input-group">
+                    <button class="btn btn-outline-dark btn-sm decrement-btn">
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm text-center quantity-input"
+                      value="1"
+                      style="max-width: 50px"
+                    />
+                    <button class="btn btn-outline-dark btn-sm increment-btn">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-arrow">
+          <div class="card-arrow-top-left"></div>
+          <div class="card-arrow-top-right"></div>
+          <div class="card-arrow-bottom-left"></div>
+          <div class="card-arrow-bottom-right"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="col-lg-4">
+      <div class="card h-100 mb-3">
+        <div class="card-header text-dark">Order Summary</div>
+        <div class="card-body text-dark">
+          <p><strong>Order Price:</strong> 132.12 PKR</p>
+          <p><strong>Shipping:</strong> 30.89 PKR</p>
+          <p><strong>Tax:</strong> 0.89 PKR</p>
+          <p><strong>Seller Discount:</strong> 0.00 PKR</p>
+          <hr />
+          <h5>Total: <span id="totalAmount">0.00</span> PKR</h5>
+          <div class="text-center my-3">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyKwZUHw0aX7_mcgK5LMGUL9sQ1jhc6ugbxw&s"
+              alt="QR Code"
+            />
+            <p class="text-muted mt-2">Pay and Confirm Order using QR Code</p>
+          </div>
+        </div>
+        <div class="card-footer button text-dark">
+          <button class="btn w-100">Review and Confirm</button>
+        </div>
+        <div class="card-arrow">
+          <div class="card-arrow-top-left"></div>
+          <div class="card-arrow-top-right"></div>
+          <div class="card-arrow-bottom-left"></div>
+          <div class="card-arrow-bottom-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form #02 -->
+   
+</div>
+
+<!-- Form #01 SCRIPT -->
+<script>
+  function calculateTotal() {
+    let total = 0;
+    document.querySelectorAll(".cart-item").forEach((item) => {
+      const price = parseFloat(item.getAttribute("data-price"));
+      const quantity = parseInt(item.querySelector(".quantity-input").value);
+      total += price * quantity;
+    });
+    document.getElementById("totalAmount").textContent = total.toFixed(2);
+  }
+
+  const selectAllCheckbox = document.getElementById("selectAll");
+  const itemCheckboxes = document.querySelectorAll(".item-checkbox");
+  const deleteSelectedButton = document.getElementById("deleteSelected");
+
+  selectAllCheckbox.addEventListener("change", function () {
+    itemCheckboxes.forEach((checkbox) => (checkbox.checked = this.checked));
+  });
+
+  document.querySelectorAll(".cart-item").forEach((item) => {
+    const incrementButton = item.querySelector(".increment-btn");
+    const decrementButton = item.querySelector(".decrement-btn");
+    const quantityInput = item.querySelector(".quantity-input");
+
+    incrementButton.addEventListener("click", () => {
+      quantityInput.value = parseInt(quantityInput.value) + 1;
+      calculateTotal();
+    });
+
+    decrementButton.addEventListener("click", () => {
+      if (parseInt(quantityInput.value) > 1) {
+        quantityInput.value = parseInt(quantityInput.value) - 1;
+        calculateTotal();
+      }
+    });
+
+    quantityInput.addEventListener("input", () => {
+      if (parseInt(quantityInput.value) < 1) {
+        quantityInput.value = 1;
+      }
+      calculateTotal();
+    });
+  });
+
+  deleteSelectedButton.addEventListener("click", function () {
+    itemCheckboxes.forEach((checkbox) => {
+      if (checkbox.checked) {
+        checkbox.closest(".cart-item").remove();
+      }
+    });
+    calculateTotal();
+  });
+
+  document.querySelectorAll(".delete-item-btn").forEach((button) => {
+    button.addEventListener("click", function () {
+      this.closest(".cart-item").remove();
+      calculateTotal();
+    });
+  });
+
+  calculateTotal();
+</script>
+
+<!-- Form #02 SCRIPT -->
