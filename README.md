@@ -31,19 +31,5 @@ A comprehensive collection of various form types and field elements for web deve
 
 You can easily customize the form fields by modifying the HTML, CSS, and JavaScript files inside the `src/` and `styles/` directories.
 
-## 📜 License
-
-This project is licensed under the MIT License. Feel free to use, modify, and distribute it as needed.
-
-## 🤝 Contributing
-
-We welcome contributions! Feel free to fork the repository and submit a pull request with your improvements.
-
-## 🌟 Show Your Support
-
-If you find this project helpful, please ⭐ the repository and share it with others!
-
----
-
 Happy Coding! 🎨💻🚀
 
