@@ -287,7 +287,87 @@
   </div>
 
   <!-- Form #02 -->
-   
+  <div class="row my-3">
+    <h3>Form #02</h3>
+    <div class="col-md-8">
+      <h4>Your Shopping Cart</h4>
+      <div id="cart-items" style="overflow-y: auto; max-height: 350px;">
+        <div class="card mb-3" data-price="7500" >
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_dIM-KTPY2it6PY3C8V7xQuAbD2b-MrfdrQ&s"
+                class="img-fluid rounded-start"
+                alt="Denim T-Shirt" 
+                style="padding: 5px;"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Denim T-Shirt</h5>
+                <p class="card-text">Color: Blue</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button class="btn btn-outline-secondary btn-sm decrement">
+                      -
+                    </button>
+                    <span class="quantity">2</span>
+                    <button class="btn btn-outline-secondary btn-sm increment">
+                      +
+                    </button>
+                  </div>
+                  <span class="price">7500 NGN</span>
+                </div>
+              </div>
+              <div class="card-footer text-end">
+                <button class="btn btn-outline-danger btn-sm remove">Remove</button>
+              </div>
+            </div>
+          </div>
+          <div class="card-arrow">
+            <div class="card-arrow-top-left"></div>
+            <div class="card-arrow-top-right"></div>
+            <div class="card-arrow-bottom-left"></div>
+            <div class="card-arrow-bottom-right"></div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn-outline-secondary">Back to Shop</a>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">Card Details</div>
+        <div class="card-body">
+          <label>Select Card Type</label>
+          <div class="mb-3">
+            <img src="https://logolook.net/wp-content/uploads/2023/09/Visa-Logo-1992.png" alt="Visa" class="me-2" width="40px" height="20px" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mastercard_2019_logo.svg/640px-Mastercard_2019_logo.svg.png" alt="MasterCard" width="40px" height="20px" />
+          </div>
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="Card Number"
+          />
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="Expiry Date"
+          />
+          <input type="text" class="form-control mb-3" placeholder="CVV" />
+        </div>
+        <div class="card-footer text-end">
+          <h5>Subtotal: <span id="subtotal">7500</span> NGN</h5>
+          <button class="btn btn-warning w-100">Checkout</button>
+        </div>
+        <div class="card-arrow">
+          <div class="card-arrow-top-left"></div>
+          <div class="card-arrow-top-right"></div>
+          <div class="card-arrow-bottom-left"></div>
+          <div class="card-arrow-bottom-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Form #01 SCRIPT -->
@@ -355,3 +435,37 @@
 </script>
 
 <!-- Form #02 SCRIPT -->
+<script>
+  $(document).ready(function () {
+    function updateSubtotal() {
+      let subtotal = 0;
+      $("#cart-items .card").each(function () {
+        let price = parseInt($(this).attr("data-price"));
+        let quantity = parseInt($(this).find(".quantity").text());
+        subtotal += price * quantity;
+      });
+      $("#subtotal").text(subtotal);
+    }
+
+    $(".increment").click(function () {
+      let quantityEl = $(this).siblings(".quantity");
+      let quantity = parseInt(quantityEl.text());
+      quantityEl.text(quantity + 1);
+      updateSubtotal();
+    });
+
+    $(".decrement").click(function () {
+      let quantityEl = $(this).siblings(".quantity");
+      let quantity = parseInt(quantityEl.text());
+      if (quantity > 1) {
+        quantityEl.text(quantity - 1);
+        updateSubtotal();
+      }
+    });
+
+    $(".remove").click(function () {
+      $(this).closest(".card").remove();
+      updateSubtotal();
+    });
+  });
+</script>
