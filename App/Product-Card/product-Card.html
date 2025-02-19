@@ -1,0 +1,697 @@
+<style>
+  /* card 1 css */
+  .product-card {
+    overflow: hidden;
+    cursor: pointer;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+  }
+  .product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-body h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .card-footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* card 2 css */
+  .pro-2 {
+    /* border-radius: 25px; */
+    /* box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3); */
+    padding: 3px;
+  }
+
+  .pro-2-heade {
+    position: relative;
+    height: 252px;
+    background: #fa782e;
+    background: -moz-linear-gradient(-45deg, #fa782e 8%, #c82930 83%);
+    background: -webkit-linear-gradient(-45deg, #fa782e 8%, #c82930 83%);
+    background: linear-gradient(135deg, #fa782e 8%, #c82930 83%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fa782e', endColorstr='#c82930', GradientType=1);
+    border-radius: 25px 25px 0 0;
+  }
+
+  .card-logo {
+    width: 55px;
+    margin: 20px;
+  }
+
+  .product-img2 {
+    position: absolute;
+    left: 0;
+    margin-top: -16px;
+    margin-left: 50px;
+  }
+
+  .product-detail {
+    padding: 0 20px;
+    font-size: 11px;
+    color: #fff;
+  }
+
+  .product-detail h2 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .back-text {
+    display: inline-block;
+    font-size: 125px;
+    font-weight: 900;
+    margin-left: -7px;
+    margin-top: -12px;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .pro-2-body {
+    height: 255px;
+    background: #fff;
+    border-radius: 0 0 25px 25px;
+  }
+
+  .product-title {
+    padding: 20px 20px 5px 20px;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .product-title b {
+    font-weight: 900;
+    letter-spacing: 0px;
+  }
+
+  .badge {
+    position: relative;
+    font-size: 10px;
+    font-weight: 300;
+    color: #fff;
+    background: #11e95b;
+    padding: 2px 5px;
+    border-radius: 4px;
+    top: -2px;
+    margin-left: 5px;
+  }
+
+  .product-caption {
+    display: block;
+    padding: 0 20px;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .product-rating {
+    padding: 0 20px;
+    font-size: 11px;
+  }
+
+  .product-rating i.grey {
+    color: #acacab;
+  }
+
+  .product-size h4 {
+    font-size: 11px;
+    padding: 0 21px;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .ul-size {
+    margin-left: 15px;
+  }
+
+  .ul-size li {
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .ul-size li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 11px;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 23px;
+    color: #000;
+  }
+
+  .ul-size li a.active {
+    background: #f35e3d;
+    color: #fff;
+  }
+
+  .product-size:before,
+  .product-size:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .product-color h4 {
+    font-size: 11px;
+    padding: 0 21px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .ul-color {
+    margin-left: 27px;
+  }
+
+  .ul-color li {
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .ul-color li a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+  }
+
+  .ul-color li a.orange {
+    background: #f35e3d;
+  }
+
+  .ul-color li a.green {
+    background: #11e95b;
+  }
+
+  .ul-color li a.yellow {
+    background: #ffd414;
+  }
+
+  .ul-color li a.active:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    border: 1px solid #f35e3d;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    margin-left: -5px;
+    margin-top: -5px;
+  }
+
+  .product-price {
+    position: absolute;
+    background: #11e95b;
+    padding: 7px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 200;
+    color: #fff;
+    border-radius: 7px;
+    margin-top: -13px;
+    margin-left: -5px;
+    box-shadow: -10px 20px 15px -10px rgba(17, 233, 91, 0.3);
+  }
+
+  .product-price b {
+    margin-left: 5px;
+  }
+
+  .yt {
+    position: fixed;
+    padding: 7px 10px 3px 10px;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .yt:hover {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  /* card 3 css */
+
+  .page-wrapper {
+    height: 100%;
+    display: table;
+  }
+
+  .page-wrapper .page-inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .el-wrapper {
+    width: 360px;
+    padding: 15px;
+    margin: 15px auto;
+    background-color: #fff;
+  }
+
+  @media (max-width: 991px) {
+    .el-wrapper {
+      width: 345px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .el-wrapper {
+      width: 290px;
+      margin: 30px auto;
+    }
+  }
+
+  .el-wrapper:hover .h-bg {
+    left: 0px;
+  }
+
+  .el-wrapper:hover .price {
+    left: 20px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #818181;
+  }
+
+  .el-wrapper:hover .add-to-cart {
+    left: 50%;
+  }
+
+  .el-wrapper:hover .img {
+    webkit-filter: blur(7px);
+    -o-filter: blur(7px);
+    -ms-filter: blur(7px);
+    filter: blur(7px);
+    filter: progid:DXImageTransform.Microsoft.Blur(pixelradius='7', shadowopacity='0.0');
+    opacity: 0.4;
+  }
+
+  .el-wrapper:hover .info-inner {
+    bottom: 155px;
+  }
+
+  .el-wrapper:hover .a-size {
+    -webkit-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    transition-delay: 300ms;
+    bottom: 50px;
+    opacity: 1;
+  }
+
+  .el-wrapper .box-down {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .el-wrapper .box-up {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .el-wrapper .img {
+    padding: 20px 0;
+    -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+  }
+
+  .h-bg {
+    -webkit-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 800ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    width: 660px;
+    height: 100%;
+    background-color: #9DCADD;
+    position: absolute;
+    left: -659px;
+  }
+
+  .h-bg .h-bg-inner {
+    width: 50%;
+    height: 100%;
+    background-color: #464646;
+  }
+
+  .info-inner {
+    -webkit-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 400ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+  }
+
+  .info-inner .p-name,
+  .info-inner .p-company {
+    display: block;
+  }
+
+  .info-inner .p-name {
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    color: #252525;
+  }
+
+  .info-inner .p-company {
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #8c8c8c;
+  }
+
+  .a-size {
+    -webkit-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 300ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    position: absolute;
+    width: 100%;
+    bottom: -20px;
+    font-family: "PT Sans", sans-serif;
+    color: #828282;
+    opacity: 0;
+  }
+
+  .a-size .size {
+    color: #252525;
+  }
+
+  .cart {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+  }
+
+  .cart .price {
+    -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #252525;
+  }
+
+  .cart .add-to-cart {
+    -webkit-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    -o-transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    transition: all 600ms cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -moz-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    -o-transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.18, 1);
+    /* ease-out */
+    -webkit-transition-delay: 100ms;
+    -o-transition-delay: 100ms;
+    transition-delay: 100ms;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .cart .add-to-cart .txt {
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+</style>
+
+<div class="row">
+  <div class="col-md-3">
+    <h3>Card #01</h3>
+    <div class="row g-4">
+      <div class="card product-card">
+        <div class="card-header text-center">Featured Product</div>
+        <img
+          src="https://img.drz.lazcdn.com/static/pk/p/a729a912b1fb7ede96f871a3776aa458.png_720x720q80.png"
+          class="product-img"
+          alt="Product Image"
+        />
+        <div class="card-body text-center">
+          <h5>Smart Watch</h5>
+          <p class="text-muted">Latest model with advanced features.</p>
+          <p class="text-success fw-bold">$199.99</p>
+          <button class="btn btn-outline-primary">Add to Cart</button>
+        </div>
+        <div class="card-footer">Free Shipping Worldwide</div>
+        <div class="card-arrow">
+          <div class="card-arrow-top-left"></div>
+          <div class="card-arrow-top-right"></div>
+          <div class="card-arrow-bottom-left"></div>
+          <div class="card-arrow-bottom-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <h3>Card #02</h3>
+    <div class="card pro-2">
+      <div class="card-header pro-2-heade">
+        <img
+          src="https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png"
+          alt="logo"
+          class="card-logo"
+        />
+        <img
+          src="https://png.pngtree.com/png-vector/20240330/ourmid/pngtree-orange-and-black-nike-dunk-low-shoe-png-image_12245777.png"
+          alt="Shoe"
+          class="product-img2"
+        />
+        <div class="product-detail">
+          <h2>Hartbeespoort</h2>
+          Support and Nike Zoom Air come together for a more supportive feel
+          with high-speed responsiveness
+        </div>
+        <span class="back-text"> FAS </span>
+      </div>
+      <div class="card-body pro-2-body">
+        <div class="product-desc">
+          <span class="product-title">
+            Hartbee<b>spoort</b>
+            <span class="badge"> New </span>
+          </span>
+          <span class="product-caption"> Basket Ball Collection </span>
+          <span class="product-rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star grey"></i>
+          </span>
+        </div>
+        <div class="product-properties">
+          <span class="product-size">
+            <h4>Size</h4>
+            <ul class="ul-size">
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li><a href="#" class="active">10</a></li>
+              <li><a href="#">11</a></li>
+            </ul>
+          </span>
+          <span class="product-color">
+            <h4>Colour</h4>
+            <ul class="ul-color">
+              <li><a href="#" class="orange active"></a></li>
+              <li><a href="#" class="green"></a></li>
+              <li><a href="#" class="yellow"></a></li>
+            </ul>
+          </span>
+          <span class="product-price"> USD<b>23,453</b> </span>
+        </div>
+      </div>
+      <div class="card-arrow">
+        <div class="card-arrow-top-left"></div>
+        <div class="card-arrow-top-right"></div>
+        <div class="card-arrow-bottom-left"></div>
+        <div class="card-arrow-bottom-right"></div>
+      </div>
+    </div>
+
+    <div class="yt">
+      <a href="https://www.youtube.com/watch?v=jYAmKNOJ4Ck" target="_blank">
+        <img
+          width="151"
+          src="https://s5.postimg.cc/vzwuxmw87/template.png"
+          alt=""
+        />
+      </a>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="row">
+      <h3>Card #03</h3>
+      <div class="col-md-12">
+        <div class="page-wrapper">
+          <div class="card">
+            <div class="card-body">
+                <div class="page-inner">
+                    <div class="row">
+                      <div class="el-wrapper">
+                        <div class="box-up">
+                          <img
+                            class="img"
+                            src="https://tasweer.com.pk/cdn/shop/files/sky-blue_29747732-728b-4ce4-bc61-d0b550d928fd.png?v=1718003747&width=1445"
+                            alt=""
+                            height="250px"
+                            width="250px"
+                          />
+                          <div class="img-info">
+                            <div class="info-inner">
+                              <span class="p-name">Safar Shirt</span>
+                              <span class="p-company">T-shirt</span>
+                            </div>
+                            <div class="a-size">
+                              Available sizes : <span class="size">S , M , L , XL</span>
+                            </div>
+                          </div>
+                        </div>
+        
+                        <div class="box-down">
+                          <div class="h-bg">
+                            <div class="h-bg-inner"></div>
+                          </div>
+        
+                          <a class="cart" href="#">
+                            <span class="price">PKR 120</span>
+                            <span class="add-to-cart">
+                              <span class="txt">Add in cart</span>
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="card-arrow">
+                <div class="card-arrow-top-left"></div>
+                <div class="card-arrow-top-right"></div>
+                <div class="card-arrow-bottom-left"></div>
+                <div class="card-arrow-bottom-right"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- card 1 script GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const productCard = document.querySelector(".product-card");
+
+    // Entrance animation
+    setTimeout(() => {
+      gsap.from(productCard, {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+        ease: "power2.out",
+      });
+    }, 100);
+
+    // Hover animation
+    productCard.addEventListener("mouseenter", function () {
+      gsap.to(this, {
+        scale: 1.05,
+        boxShadow: "0px 0px 30px rgba(0,0,0,0.2)",
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    });
+
+    productCard.addEventListener("mouseleave", function () {
+      gsap.to(this, {
+        scale: 1,
+        boxShadow: "0px 0px 0px rgba(0,0,0,0.0)",
+        duration: 0.3,
+        ease: "power2.in",
+      });
+    });
+  });
+</script>
+
+<!-- card 2 script -->
